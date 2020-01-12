@@ -1,0 +1,80 @@
+$pink: #ff6d6d;
+$grey: #282828;
+$semi-white: #f6f5f3;
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,500&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    color: $grey;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    color: $pink;
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1070px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    div {
+        margin: 0 15px;
+    }
+    img {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+.features-1  {
+    background-image: url("../../static/img/content/BG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 110px 0 75px;
+}
+
+.testimonials {
+    background-image: url("../../static/img/content/t-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 110px 0 75px;
+    p {
+        color: #fff;
+        opacity: 0.7;
+        font-weight: 400;
+    }
+    .logos {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 100px;
+    }
+}
+
+.features {
+    background: $semi-white;
+    h4 {
+        color: #fff;
+    }
+    .container {
+        max-width: 810px;
+    }
+}
