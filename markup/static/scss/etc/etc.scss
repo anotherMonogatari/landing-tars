@@ -1,13 +1,29 @@
 $pink: #ff6d6d;
 $grey: #282828;
 $semi-white: #f6f5f3;
+$form-bg: #323969;
+$input-bg: #464c77;
 
-@import url('https://fonts.googleapis.com/css?family=Exo:400,500&display=swap');
+$screenMd: 1350px;
+$screenSm: 730px;
+
+@import url('https://fonts.googleapis.com/css?family=Exo:100,400,500&display=swap');
 
 body {
     text-align: center;
     font-family: 'Exo', sans-serif;
     color: $grey;
+    max-width: 1440px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 100;
+    @media (max-width: $screenMd) {
+        font-size: 48px;
+        padding: 0 10px;
+    }
 }
 
 h2 {
@@ -26,6 +42,44 @@ h4 {
 p {
     font-size: 16px;
     font-weight: 500;
+    line-height: 20px;
+}
+
+small {
+    margin-top: 20px;
+    display: block;
+    font-size: 14px;
+}
+
+input {
+    box-sizing: border-box;
+    width: 260px;
+    height: 48px;
+    background: $input-bg;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    padding: 0 30px;
+    color: #fff;
+    &::placeholder {
+        color: #cbcbcb;
+    }
+    &[type="submit"] {
+        cursor: pointer;
+        background: $pink;
+        border-color: $pink;
+        position: relative;
+        @media (max-width: $screenMd) {
+            margin-top: 70px;
+        }
+    }
+    @media (max-width: $screenMd) {
+        margin-top: 20px;
+    }
+}
+
+.red-dots {
+    color: $pink;
+    font-size: 40pxs;
 }
 
 .container {
@@ -37,25 +91,143 @@ p {
     display: flex;
     div {
         margin: 0 15px;
+        max-width: 360px;
+        @media (max-width: $screenMd) {
+            margin-bottom: 40px;
+            margin-top: 40px;
+            max-width: 400px;
+        }
     }
     img {
         height: 75px;
         width: 75px;
     }
+    @media (max-width: $screenMd) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
+
+
+
+header {
+    background-image: url("../../static/img/content/header-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 240px 0;
+    @media (max-width: $screenSm) {
+        padding: 80px 0 100px;
+    }
+    .container {
+        max-width: 810px;
+    }
+    img {
+        opacity: 0.4;
+        margin: auto;
+    }
+    input {
+        display: block;
+        cursor: pointer;
+        margin: 60px auto 0;
+        background: $pink;
+        border-color: $pink;
+    }
+}
+
+
+
+
+.platforms {
+    text-align: left;
+    padding: 140px 0;
+    background-image: url("../../static/img/content/Rectangle-21-copy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    @media (max-width: $screenMd) {
+        background: none;
+        padding: 80px 0;
+    }
+    .container {
+        @media (min-width: 700px) and (max-width: $screenMd) {
+            width: 595px;
+        }
+    }
+    p {
+        color: $grey;
+        opacity: 0.7;
+    }
+    div:not(.container) {
+        max-width: 55%;
+        margin: 0 auto 0 15px;
+        @media (max-width: $screenMd) {
+            text-align: center;
+            max-width: 100%;
+            margin: 0 15px;
+        }
+    }
+}
+
+
+
 
 .features-1  {
     background-image: url("../../static/img/content/BG.png");
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 220px 0;
+    background-position: center;
+    padding: 150px 0;
+    @media (max-width: $screenMd) {
+        padding:  80px 0 40px;
+    }
 }
+
+
+
+
+.tap {
+    text-align: left;
+    padding: 120px 0;
+    background-image: url("../../static/img/content/macbook.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (max-width: $screenMd) {
+        background: none;
+        margin: 0 15px;
+        padding: 80px 0;
+    }
+    .container {
+        @media (min-width: 700px) and (max-width: $screenMd) {
+            width: 595px;
+        }
+    }
+    p {
+        color: $grey;
+        opacity: 0.7;
+    }
+    div:not(.container) {
+        max-width: 555px;
+        margin: 0 0 0 auto;
+        @media (max-width: $screenMd) {
+            text-align: center;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+
+
 
 .testimonials {
     background-image: url("../../static/img/content/t-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 110px 0 75px;
+    @media (max-width: $screenMd) {
+        padding: 40px 0;
+    }
     p {
         color: #fff;
         opacity: 0.7;
@@ -69,16 +241,200 @@ p {
         justify-content: space-around;
         align-items: center;
         margin-top: 100px;
+        filter: invert(1);
+        opacity: 0.7;
+        @media (max-width: $screenMd) {
+            display: none;
+        }
     }
 }
 
-.features {
+
+
+
+.features-2 {
     background: $semi-white;
     padding: 100px 0 0;
+    @media (max-width: $screenMd) {
+        padding: 80px 15px 0;
+    }
     h4 {
         color: #fff;
     }
     .container {
         max-width: 810px;
+    }
+    img {
+        max-width: 105%;
+        @media (max-width: $screenMd) {
+            max-width: 90%;
+            margin-top: 40px;
+        }
+    }
+}
+
+
+
+
+.form {
+    background: $form-bg;
+    padding: 100px 0;
+    margin-top: -4px;
+    @media (max-width: $screenMd) {
+        padding: 80px 0;
+    }
+    .flex {
+        justify-content: space-between;
+        margin: 100px 0 50px;
+        @media (max-width: $screenMd) {
+            margin: 50px 0 25px;
+        }
+    }
+    h2 {
+        color: #fff;
+        position: relative;
+        @media (max-width: $screenMd) {
+            padding: 0 10px;
+        }
+        &::after {
+            content: "30 days free trial for all";
+            font-size: 16px;
+            color: #cbcbcb;
+            position: absolute;
+            bottom: -60px;
+            right: 60px;
+            @media (max-width: $screenMd) {
+                bottom: -295px;
+                left: 0;
+            }
+        }
+        &::before {
+            content: url("../../static/img/content/ARROW.png");
+            position: absolute;
+            bottom: -95px;
+            right: 205px;
+            @media (max-width: $screenMd) {
+                bottom: -330px;
+                left: -20px;
+            }
+        }
+    }
+    p, a {
+        color: #fff;
+        opacity: 0.7;
+    }
+    p {
+        @media (max-width: $screenMd) {
+            padding: 0 10px;
+        }
+    }
+}
+
+
+
+
+footer {
+    background-image: url("../../static/img/content/Rectangle-21-copy-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    @media (max-width: $screenMd) {
+        background: none;
+    }
+    .container {
+        padding: 80px 0;
+        display: flex;
+        text-align: left;
+        @media (max-width: $screenSm) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 80px 0 60px;
+        }
+        @media (max-width: $screenSm) {
+            margin: 0 20px;
+        }
+        div {
+            width: 25%;
+            margin-right: 30px;
+            &.small-block {
+                width: 15%;
+                @media (max-width: $screenSm) {
+                    width: 100%;
+                }
+            }
+            &.flex {
+                width: 100%;
+            }
+            @media (max-width: $screenSm) {
+                width: 100%;
+            }
+            @media (max-width: $screenMd) {
+                margin-left: 20px;
+            }
+        }
+        h4 {
+            margin-top: 12px;
+        }
+        p {
+            line-height: 30px;
+            margin-top: -4px;
+        }
+        a {
+            display: block;
+            margin-bottom: 12px;
+            color: $grey;
+        }
+    }
+    .flex {
+        justify-content: center;
+        flex-direction: row;
+        img {
+            margin: 20px 10px 0;
+            width: auto;
+            height: 20px;
+            filter: grayscale(100%);
+        }
+        @media (max-width: $screenMd) {
+            margin-left: 0;
+            justify-content: flex-start;
+        }
+    }
+    form {
+        display: flex;
+    }
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 48px;
+        background: #f6f6f6;
+        border: 1px solid #cbcbcb;
+        border-radius: 5px;
+        padding: 0 30px;
+        color: #cbcbcb;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        @media (max-width: $screenSm) {
+            margin-top: 0;
+        }
+        &::placeholder {
+            color: #cbcbcb;
+        }
+        &[type="submit"] {
+            padding: 0;
+            width: 80px;
+            color: #fff;
+            border-radius: 5px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            background: $pink;
+            border-color: $pink;
+            @media (max-width: $screenMd) {
+                margin-top: 20px;
+            }
+            @media (max-width: $screenSm) {
+                margin-top: 0;
+            }
+        }
     }
 }
